@@ -25,10 +25,10 @@ func main() {
 	rdata := [][]float64{}
 	if *ifile != "" {
 		// fail silently on error
-		rdata, _ = readData(*ifile, -1)
+		rdata, _ = ReadData(*ifile, -1)
 	}
 
-	wdata := makeData(m, *num, *sigma, *meanx, *meany)
+	wdata := NewDataSet(m, *num, *sigma, *meanx, *meany)
 	if len(rdata) == 0 {
 		data = wdata
 	} else {
@@ -36,10 +36,10 @@ func main() {
 		if len(wdata) < len(rdata) {
 			rdata, wdata = wdata, rdata
 		}
-		data = appendData(rdata, wdata)
+		data = AppendData(rdata, wdata)
 	}
 
-	err := writeData(*ofile, data)
+	err := WriteData(*ofile, data)
 	if err != nil {
 		log.Printf("unable to write output file error : %+v\n", err)
 	}

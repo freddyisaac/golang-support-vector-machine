@@ -144,7 +144,7 @@ func EvalK(X [][]float64, j int, x []float64, sigma float64) float64 {
 	return val
 }
 
-func EvalF(X [][]float64, x, alpha []float64, b, nu float64) float64 {
+func EvaluateF(X [][]float64, x, alpha []float64, b, nu float64) float64 {
 	var f float64
 	f = 0.0
 	for j := 0; j < len(alpha); j++ {
