@@ -29,6 +29,19 @@ create the example with
 
 ```go build -o 2d_ex 2d_ex.go svm.go math.go utils.go```
 
+It takes quite a few params and is a bit noisy to the terminal but essentially entering
+
+```2d_ex -if data.txt -lbx 0.0 -ubx 1.0 -lby 0.0 -uby 1.0 -of out.txt```
+
+All being well it should produce a 50 by 50 grid which can be plotted as contours from within R again using
+
+```
+> source("plot_routines.r")
+> cplot("out.txt", 50)
+```
+
+
+
 
 
 
