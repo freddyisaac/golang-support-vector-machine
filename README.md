@@ -1,4 +1,8 @@
-# Golang Support Vector Machine xample implementation
+# Golang Support Vector Machine Example implementation
+
+## Introduction
+
+need an intro here
 
 ## Generating Test data
 
@@ -39,6 +43,11 @@ All being well it should produce a 50 by 50 grid which can be plotted as contour
 > source("plot_routines.r")
 > cplot("out.txt", 50)
 ```
+
+If all is well then you should see something like this
+
+![contours](https://github.com/freddyisaac/support-vector-machine/assets/40456262/91451beb-d723-4c7a-9678-9c1085759a36)
+
 
 
 
